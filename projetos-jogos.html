@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos de Jogos | Programador Júnior</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-code"></i> dev<span>.</span>portfólio
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre / Contato</a></li>
+                <li><a href="projetos.html" class="active">Projetos</a></li>
+                <li><a href="linkedin.html">LinkedIn</a></li>
+                <li><a href="sobre.html#contato" class="nav-cta">Fale Comigo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="section-header">
+            <span class="page-number">Projetos de Jogos</span>
+            <span class="section-tag">Games</span>
+            <h2>Jogos 2D e Puzzles</h2>
+            <p>Clique no nome do jogo para jogar diretamente no site publicado.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="card-icon icon-jogos"><i class="fa-solid fa-gamepad"></i></div>
+                <span class="card-tag">Jogos</span>
+                <!-- Título com link para o site do jogo -->
+                <h4><a href="https://meu-jogo-plataforma.netlify.app" target="_blank" class="card-link" style="font-size:1.15rem; color:#fff; text-decoration:none;">Jogo de Plataforma 2D</a></h4>
+                <p>Game desenvolvido com JavaScript e Canvas API, com física personalizada, múltiplos níveis e sistema de pontuação.</p>
+                <div class="card-links">
+                    <a href="https://meu-jogo-plataforma.netlify.app" target="_blank" class="card-link"><i class="fa-solid fa-play"></i> Jogar agora</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-icon icon-jogos"><i class="fa-solid fa-chess-board"></i></div>
+                <span class="card-tag">Jogos</span>
+                <h4><a href="https://puzzle-interativo.vercel.app" target="_blank" class="card-link" style="font-size:1.15rem; color:#fff; text-decoration:none;">Puzzle Game Interativo</a></h4>
+                <p>Quebra-cabeça com níveis progressivos, desenvolvido com React e animações fluidas. Compatível com dispositivos móveis.</p>
+                <div class="card-links">
+                    <a href="https://puzzle-interativo.vercel.app" target="_blank" class="card-link"><i class="fa-solid fa-play"></i> Jogar agora</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:2rem;">
+            <a href="projetos.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Voltar para categorias</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2026 <strong>[Seu Nome]</strong> · Programador Júnior · 3 anos ADS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

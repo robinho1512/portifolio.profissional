@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | Categorias</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para os botões de categoria */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .category-card {
+            background: var(--bg-surface);
+            border-radius: var(--radius-lg);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.15);
+            background: var(--bg-elevated);
+        }
+        .category-card .cat-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #06090f;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+        .category-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        .category-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+        /* Cores dos ícones */
+        .cat-slides { background: var(--gradient-4); }
+        .cat-redacao { background: var(--gradient-2); }
+        .cat-html { background: linear-gradient(135deg, #ff6d00, #ff9100); }
+        .cat-node { background: linear-gradient(135deg, #00c853, #69f0ae); }
+        .cat-jogos { background: linear-gradient(135deg, #ff4081, #ff80ab); }
+        .cat-snack { background: linear-gradient(135deg, #00bcd4, #00e5ff); }
+        .cat-googleai { background: linear-gradient(135deg, #448aff, #82b1ff); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-code"></i> dev<span>.</span>portfólio
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre / Contato</a></li>
+                <li><a href="projetos.html" class="active">Projetos</a></li>
+                <li><a href="linkedin.html">LinkedIn</a></li>
+                <li><a href="sobre.html#contato" class="nav-cta">Fale Comigo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="section-header">
+            <span class="page-number">Página 03</span>
+            <span class="section-tag">Portfólio</span>
+            <h2>Escolha uma Categoria</h2>
+            <p>Clique em um dos cards abaixo para ver os projetos específicos.</p>
+        </div>
+
+        <div class="category-grid">
+            <!-- Slides -->
+            <a href="projetos-slides.html" class="category-card">
+                <div class="cat-icon cat-slides"><i class="fa-solid fa-file-powerpoint"></i></div>
+                <h3>Slides</h3>
+                <p>Apresentações profissionais e templates</p>
+            </a>
+            <!-- Redações -->
+            <a href="projetos-redacoes.html" class="category-card">
+                <div class="cat-icon cat-redacao"><i class="fa-solid fa-pen-fancy"></i></div>
+                <h3>Redações</h3>
+                <p>Artigos técnicos e ensaios</p>
+            </a>
+            <!-- HTML+CSS -->
+            <a href="projetos-html.html" class="category-card">
+                <div class="cat-icon cat-html"><i class="fa-brands fa-html5"></i></div>
+                <h3>HTML+CSS</h3>
+                <p>Landing pages e dashboards</p>
+            </a>
+            <!-- Node.js -->
+            <a href="projetos-node.html" class="category-card">
+                <div class="cat-icon cat-node"><i class="fa-brands fa-node"></i></div>
+                <h3>Node.js</h3>
+                <p>APIs, microserviços e backend</p>
+            </a>
+            <!-- Jogos -->
+            <a href="projetos-jogos.html" class="category-card">
+                <div class="cat-icon cat-jogos"><i class="fa-solid fa-gamepad"></i></div>
+                <h3>Jogos</h3>
+                <p>Games 2D e puzzles interativos</p>
+            </a>
+            <!-- Snack Expo -->
+            <a href="projetos-snack.html" class="category-card">
+                <div class="cat-icon cat-snack"><i class="fa-brands fa-react"></i></div>
+                <h3>Snack Expo</h3>
+                <p>Apps mobile com React Native</p>
+            </a>
+            <!-- Google AI -->
+            <a href="projetos-googleai.html" class="category-card">
+                <div class="cat-icon cat-googleai"><i class="fa-solid fa-robot"></i></div>
+                <h3>Google AI</h3>
+                <p>Chatbots e visão computacional</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2026 <strong>[Seu Nome]</strong> · Programador Júnior · 3 anos ADS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

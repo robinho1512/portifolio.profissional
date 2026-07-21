@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Node.js | Programador Júnior</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-code"></i> dev<span>.</span>portfólio
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre / Contato</a></li>
+                <li><a href="projetos.html" class="active">Projetos</a></li>
+                <li><a href="linkedin.html">LinkedIn</a></li>
+                <li><a href="sobre.html#contato" class="nav-cta">Fale Comigo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="section-header">
+            <span class="page-number">Projetos Node.js</span>
+            <span class="section-tag">Backend</span>
+            <h2>APIs e Microserviços</h2>
+            <p>Clique no nome do projeto para acessar o código no GitHub.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="card-icon icon-node"><i class="fa-brands fa-node"></i></div>
+                <span class="card-tag">Node.js</span>
+                <!-- Título com link para o GitHub -->
+                <h4><a href="https://github.com/seu-usuario/api-ecommerce" target="_blank" class="card-link" style="font-size:1.15rem; color:#fff; text-decoration:none;">API RESTful de E-commerce</a></h4>
+                <p>Backend completo com autenticação JWT, integração com Stripe, banco MongoDB e documentação Swagger.</p>
+                <div class="card-links">
+                    <a href="https://github.com/seu-usuario/api-ecommerce" target="_blank" class="card-link"><i class="fa-brands fa-github"></i> Ver repositório</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-icon icon-node"><i class="fa-solid fa-server"></i></div>
+                <span class="card-tag">Node.js</span>
+                <h4><a href="https://github.com/seu-usuario/web-scraping-service" target="_blank" class="card-link" style="font-size:1.15rem; color:#fff; text-decoration:none;">Serviço de Web Scraping</a></h4>
+                <p>Microserviço com Puppeteer para extração automatizada de dados web, com fila e cache em Redis.</p>
+                <div class="card-links">
+                    <a href="https://github.com/seu-usuario/web-scraping-service" target="_blank" class="card-link"><i class="fa-brands fa-github"></i> Ver repositório</a>
+                </div>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+        </div>
+        <div style="text-align:center; margin-top:2rem;">
+            <a href="projetos.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Voltar para categorias</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2026 <strong>[Seu Nome]</strong> · Programador Júnior · 3 anos ADS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
