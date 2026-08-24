@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Prático de Teclas de Atalho – Mais de 30 Atalhos</title>
+    <style>
+        /* ========== RESET & BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f3f0;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #2e2e2e;
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            padding: 2.2rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .subtitulo {
+            font-size: 1.25rem;
+            color: #4a4f55;
+            margin-bottom: 1.8rem;
+            font-weight: 400;
+            background: #f0ede8;
+            padding: 0.8rem 1.2rem;
+            border-radius: 18px;
+            border-left: 6px solid #b8a78c;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            font-weight: 500;
+            color: #3a3f47;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e1dcd3;
+            padding-bottom: 0.4rem;
+        }
+
+        kbd {
+            display: inline-block;
+            background-color: #fdfdfb;
+            border: 2px solid #cbc3b8;
+            border-bottom-width: 4px;
+            border-radius: 10px;
+            padding: 0.35rem 0.8rem;
+            font-family: 'Segoe UI', 'Courier New', monospace;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1f2a36;
+            box-shadow: 0 3px 0 #b0a99e, 0 4px 8px rgba(0, 0, 0, 0.05);
+            margin: 0 0.15rem;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+            white-space: nowrap;
+            transition: all 0.1s ease;
+        }
+
+        .lista-atalhos {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        .atalho-item {
+            background-color: #faf9f7;
+            border-radius: 14px;
+            padding: 0.9rem 1.4rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.8rem 1.4rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+            border: 1px solid #ebe7e1;
+            transition: background-color 0.2s;
+        }
+
+        .atalho-item:hover {
+            background-color: #f3efe8;
+        }
+
+        .atalho-keystrokes {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.25rem 0.45rem;
+            font-size: 1.1rem;
+        }
+
+        .atalho-descricao {
+            font-weight: 500;
+            color: #2f3b45;
+            margin-left: auto;
+            font-size: 1.1rem;
+            text-align: right;
+        }
+
+        .barra-pesquisa {
+            margin: 1.2rem 0 1.8rem;
+        }
+
+        .barra-pesquisa label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        #campo-busca {
+            width: 100%;
+            padding: 1rem 1.4rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            border: 2px solid #cfc7bc;
+            background-color: #fefefe;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+
+        #campo-busca:focus {
+            border-color: #9b8c7a;
+            box-shadow: 0 0 0 4px rgba(180, 160, 140, 0.2);
+        }
+
+        .sem-resultados {
+            background: #fdf2e4;
+            padding: 1rem 1.5rem;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            color: #6d4c2c;
+            margin-top: 1rem;
+            border: 1px dashed #c4a27e;
+        }
+
+        .quadro-como-usar {
+            background-color: #f0ede6;
+            border-radius: 24px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0 1rem;
+            border: 2px solid #d8d0c3;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .quadro-como-usar p {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .passo-a-passo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            align-items: center;
+            background: #fffefc;
+            border-radius: 18px;
+            padding: 1rem 1.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .passo-a-passo span {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #745f46;
+            background: #e8dfd2;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        footer {
+            font-size: 1.2rem;
+            color: #4a4a4a;
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #e6e1d9;
+            border-radius: 30px;
+            width: 100%;
+            font-style: italic;
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                padding: 1.5rem 1.1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .atalho-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .atalho-descricao {
+                margin-left: 0;
+                text-align: left;
+                font-size: 1rem;
+            }
+            kbd {
+                font-size: 0.95rem;
+                padding: 0.3rem 0.6rem;
+            }
+            .passo-a-passo {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Descomplicando o Teclado</h1>
+            <div class="subtitulo">
+                <strong>Teclas de atalho</strong> são combinações que agilizam tarefas. 
+                Você pressiona duas ou mais teclas juntas para copiar, colar, trocar de janela e muito mais. 
+                É só praticar um pouquinho! Agora com <strong>mais de 30 atalhos</strong> para facilitar sua vida.
+            </div>
+        </header>
+
+        <!-- Barra de Pesquisa Interativa -->
+        <div class="barra-pesquisa">
+            <label for="campo-busca">🔍 Buscar atalho (ex: copiar, aba, janela, salvar, zoom)</label>
+            <input type="text" id="campo-busca" placeholder="Digite aqui o que você quer fazer...">
+            <div id="mensagem-sem-resultados" class="sem-resultados" style="display: none;">
+                Nenhum atalho encontrado para essa busca. Tente "copiar", "janela", "aba", "salvar" ou "zoom".
+            </div>
+        </div>
+
+        <!-- Bloco: Essenciais do Dia a Dia -->
+        <h2>✨ Essenciais do Dia a Dia</h2>
+        <div class="lista-atalhos" id="lista-essenciais">
+            <div class="atalho-item" data-termos="copiar copia cópia ctrl c">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>C</kbd></div>
+                <div class="atalho-descricao">Copiar</div>
+            </div>
+            <div class="atalho-item" data-termos="colar cola ctrl v">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>V</kbd></div>
+                <div class="atalho-descricao">Colar</div>
+            </div>
+            <div class="atalho-item" data-termos="recortar cortar ctrl x">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>X</kbd></div>
+                <div class="atalho-descricao">Recortar</div>
+            </div>
+            <div class="atalho-item" data-termos="desfazer desfaz voltar ctrl z">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>Z</kbd></div>
+                <div class="atalho-descricao">Desfazer</div>
+            </div>
+            <div class="atalho-item" data-termos="refazer repetir ctrl y">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>Y</kbd></div>
+                <div class="atalho-descricao">Refazer</div>
+            </div>
+            <div class="atalho-item" data-termos="selecionar tudo tudo marcar ctrl a">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>A</kbd></div>
+                <div class="atalho-descricao">Selecionar tudo</div>
+            </div>
+            <div class="atalho-item" data-termos="salvar arquivo ctrl s">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>S</kbd></div>
+                <div class="atalho-descricao">Salvar</div>
+            </div>
+            <div class="atalho-item" data-termos="imprimir impressão print ctrl p">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>P</kbd></div>
+                <div class="atalho-descricao">Imprimir</div>
+            </div>
+            <div class="atalho-item" data-termos="abrir arquivo ctrl o">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>O</kbd></div>
+                <div class="atalho-descricao">Abrir arquivo</div>
+            </div>
+            <div class="atalho-item" data-termos="novo documento ctrl n">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>N</kbd></div>
+                <div class="atalho-descricao">Novo documento</div>
+            </div>
+            <div class="atalho-item" data-termos="pesquisar localizar ctrl f">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>F</kbd></div>
+                <div class="atalho-descricao">Pesquisar na página</div>
+            </div>
+        </div>
+
+        <!-- Bloco: Navegando no Computador -->
+        <h2>🖥️ Navegando no Computador</h2>
+        <div class="lista-atalhos" id="lista-navegacao">
+            <div class="atalho-item" data-termos="mudar janela alternar janela alt tab">
+                <div class="atalho-keystrokes"><kbd>Alt</kbd> + <kbd>Tab</kbd></div>
+                <div class="atalho-descricao">Mudar de janela</div>
+            </div>
+            <div class="atalho-item" data-termos="mostrar área de trabalho desktop windows d">
+                <div class="atalho-keystrokes"><kbd>⊞ Win</kbd> + <kbd>D</kbd></div>
+                <div class="atalho-descricao">Mostrar área de trabalho</div>
+            </div>
+            <div class="atalho-item" data-termos="gerenciador de tarefas ctrl shift esc">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd></div>
+                <div class="atalho-descricao">Gerenciador de tarefas</div>
+            </div>
+            <div class="atalho-item" data-termos="bloquear computador windows l">
+                <div class="atalho-keystrokes"><kbd>⊞ Win</kbd> + <kbd>L</kbd></div>
+                <div class="atalho-descricao">Bloquear computador</div>
+            </div>
+            <div class="atalho-item" data-termos="minimizar todas janelas windows m">
+                <div class="atalho-keystrokes"><kbd>⊞ Win</kbd> + <kbd>M</kbd></div>
+                <div class="atalho-descricao">Minimizar todas janelas</div>
+            </div>
+            <div class="atalho-item" data-termos="restaurar janelas minimizadas windows shift m">
+                <div class="atalho-keystrokes"><kbd>⊞ Win</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd></div>
+                <div class="atalho-descricao">Restaurar janelas minimizadas</div>
+            </div>
+            <div class="atalho-item" data-termos="abrir explorador de arquivos windows e">
+                <div class="atalho-keystrokes"><kbd>⊞ Win</kbd> + <kbd>E</kbd></div>
+                <div class="atalho-descricao">Abrir Explorador de Arquivos</div>
+            </div>
+            <div class="atalho-item" data-termos="menu iniciar windows tecla win">
+                <div class="atalho-keystrokes"><kbd>⊞ Win</kbd></div>
+                <div class="atalho-descricao">Abrir Menu Iniciar</div>
+            </div>
+            <div class="atalho-item" data-termos="captura de tela print screen">
+                <div class="atalho-keystrokes"><kbd>Print Screen</kbd></div>
+                <div class="atalho-descricao">Capturar tela inteira</div>
+            </div>
+            <div class="atalho-item" data-termos="fechar janela alt f4">
+                <div class="atalho-keystrokes"><kbd>Alt</kbd> + <kbd>F4</kbd></div>
+                <div class="atalho-descricao">Fechar janela/programa</div>
+            </div>
+            <div class="atalho-item" data-termos="renomear arquivo f2">
+                <div class="atalho-keystrokes"><kbd>F2</kbd></div>
+                <div class="atalho-descricao">Renomear arquivo selecionado</div>
+            </div>
+        </div>
+
+        <!-- Bloco: Usando a Internet -->
+        <h2>🌐 Usando a Internet</h2>
+        <div class="lista-atalhos" id="lista-internet">
+            <div class="atalho-item" data-termos="nova aba nova guia ctrl t">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>T</kbd></div>
+                <div class="atalho-descricao">Nova aba</div>
+            </div>
+            <div class="atalho-item" data-termos="fechar aba fechar guia ctrl w">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>W</kbd></div>
+                <div class="atalho-descricao">Fechar aba</div>
+            </div>
+            <div class="atalho-item" data-termos="reabrir aba reabrir guia ctrl shift t">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></div>
+                <div class="atalho-descricao">Reabrir aba fechada</div>
+            </div>
+            <div class="atalho-item" data-termos="atualizar página recarregar f5">
+                <div class="atalho-keystrokes"><kbd>F5</kbd></div>
+                <div class="atalho-descricao">Atualizar página</div>
+            </div>
+            <div class="atalho-item" data-termos="barra de endereço url ctrl l f6">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>L</kbd></div>
+                <div class="atalho-descricao">Ir para barra de endereço</div>
+            </div>
+            <div class="atalho-item" data-termos="aumentar zoom ctrl mais">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>+</kbd></div>
+                <div class="atalho-descricao">Aumentar zoom</div>
+            </div>
+            <div class="atalho-item" data-termos="diminuir zoom ctrl menos">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>-</kbd></div>
+                <div class="atalho-descricao">Diminuir zoom</div>
+            </div>
+            <div class="atalho-item" data-termos="restaurar zoom ctrl 0">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>0</kbd></div>
+                <div class="atalho-descricao">Restaurar zoom padrão</div>
+            </div>
+            <div class="atalho-item" data-termos="favoritos marcadores ctrl d">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>D</kbd></div>
+                <div class="atalho-descricao">Adicionar aos favoritos</div>
+            </div>
+            <div class="atalho-item" data-termos="histórico ctrl h">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>H</kbd></div>
+                <div class="atalho-descricao">Abrir histórico</div>
+            </div>
+            <div class="atalho-item" data-termos="aba anônima privada ctrl shift n">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd></div>
+                <div class="atalho-descricao">Nova janela anônima</div>
+            </div>
+        </div>
+
+        <!-- Bloco: Edição de Texto e Produtividade -->
+        <h2>📝 Edição de Texto e Produtividade</h2>
+        <div class="lista-atalhos" id="lista-edicao">
+            <div class="atalho-item" data-termos="negrito ctrl b">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>B</kbd></div>
+                <div class="atalho-descricao">Negrito</div>
+            </div>
+            <div class="atalho-item" data-termos="itálico ctrl i">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>I</kbd></div>
+                <div class="atalho-descricao">Itálico</div>
+            </div>
+            <div class="atalho-item" data-termos="sublinhado ctrl u">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>U</kbd></div>
+                <div class="atalho-descricao">Sublinhado</div>
+            </div>
+            <div class="atalho-item" data-termos="localizar e substituir ctrl h">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>H</kbd></div>
+                <div class="atalho-descricao">Localizar e substituir</div>
+            </div>
+            <div class="atalho-item" data-termos="aumentar fonte ctrl shift maior">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&gt;</kbd></div>
+                <div class="atalho-descricao">Aumentar tamanho da fonte</div>
+            </div>
+            <div class="atalho-item" data-termos="diminuir fonte ctrl shift menor">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>&lt;</kbd></div>
+                <div class="atalho-descricao">Diminuir tamanho da fonte</div>
+            </div>
+            <div class="atalho-item" data-termos="selecionar palavra duplo clique mouse">
+                <div class="atalho-keystrokes"><kbd>Duplo clique</kbd></div>
+                <div class="atalho-descricao">Selecionar palavra</div>
+            </div>
+            <div class="atalho-item" data-termos="selecionar parágrafo triplo clique mouse">
+                <div class="atalho-keystrokes"><kbd>Triplo clique</kbd></div>
+                <div class="atalho-descricao">Selecionar parágrafo</div>
+            </div>
+            <div class="atalho-item" data-termos="mover cursor início da linha home">
+                <div class="atalho-keystrokes"><kbd>Home</kbd></div>
+                <div class="atalho-descricao">Ir para início da linha</div>
+            </div>
+            <div class="atalho-item" data-termos="mover cursor fim da linha end">
+                <div class="atalho-keystrokes"><kbd>End</kbd></div>
+                <div class="atalho-descricao">Ir para fim da linha</div>
+            </div>
+            <div class="atalho-item" data-termos="excluir palavra anterior ctrl backspace">
+                <div class="atalho-keystrokes"><kbd>Ctrl</kbd> + <kbd>Backspace</kbd></div>
+                <div class="atalho-descricao">Excluir palavra anterior</div>
+            </div>
+        </div>
+
+        <!-- Seção Como Usar -->
+        <div class="quadro-como-usar">
+            <h2 style="margin-top:0; border-bottom: none; padding-bottom:0;">📌 Como usar as teclas de atalho?</h2>
+            <p>É bem simples! Siga os passos abaixo:</p>
+            <div class="passo-a-passo">
+                <span>1</span> 
+                <p style="margin:0;">Segure a primeira tecla (ex: <kbd>Ctrl</kbd>) sem soltar.</p>
+            </div>
+            <div class="passo-a-passo">
+                <span>2</span> 
+                <p style="margin:0;">Enquanto segura, dê um toque na segunda tecla (ex: <kbd>C</kbd>).</p>
+            </div>
+            <div class="passo-a-passo">
+                <span>3</span> 
+                <p style="margin:0;">Solte as duas teclas. Pronto! A ação aconteceu.</p>
+            </div>
+            <p style="margin-top:1rem; font-weight:500;">💡 Exemplo: para copiar, segure <kbd>Ctrl</kbd> e toque em <kbd>C</kbd>.</p>
+            <p style="margin-top:0.8rem;">🔹 Se houver três teclas (ex: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd>), segure as duas primeiras e toque na terceira.</p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        🎉 Agora são mais de 30 atalhos! Aprenda um por dia e logo você estará usando o computador com muito mais agilidade!
+    </footer>
+
+    <script>
+        (function() {
+            const campoBusca = document.getElementById('campo-busca');
+            const mensagemSemResultados = document.getElementById('mensagem-sem-resultados');
+            const todosItens = document.querySelectorAll('.atalho-item');
+
+            function filtrarAtalhos() {
+                const termo = campoBusca.value.trim().toLowerCase();
+                let algumVisivel = false;
+
+                if (termo === '') {
+                    todosItens.forEach(item => {
+                        item.style.display = 'flex';
+                    });
+                    mensagemSemResultados.style.display = 'none';
+                    return;
+                }
+
+                todosItens.forEach(item => {
+                    const termos = item.getAttribute('data-termos') || '';
+                    const termosLower = termos.toLowerCase();
+                    
+                    if (termosLower.includes(termo)) {
+                        item.style.display = 'flex';
+                        algumVisivel = true;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                if (algumVisivel) {
+                    mensagemSemResultados.style.display = 'none';
+                } else {
+                    mensagemSemResultados.style.display = 'block';
+                }
+            }
+
+            campoBusca.addEventListener('input', filtrarAtalhos);
+
+            campoBusca.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    campoBusca.value = '';
+                    filtrarAtalhos();
+                    campoBusca.blur();
+                }
+            });
+
+            // Inicializa a exibição
+            filtrarAtalhos();
+        })();
+    </script>
+</body>
+</html>
